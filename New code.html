@@ -1,0 +1,606 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>successfully login</title>
+<link rel="shortcut icon" type="image" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFw4IyufHVqRiQ3jvsTTCZLDd6YbxMJIP_Tw&usqp=CAU">
+<script src="https://kit.fontawesome.com/8359ac44a8.js" crossorigin="anonymous"></script>
+<style>
+    .button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+.abc{
+  float: right;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:#00FFFF;
+}
+
+.active {
+  background-color: #9932CC;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:  cyan;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+* {
+  box-sizing: border-box
+}
+body {
+  font-family: Verdana, 
+  sans-serif; margin:0;
+  background-color: #FFFF66;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  border-radius: 50px;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {
+    font-size: 11px;
+  }
+  .qwe{
+  float: right;
+}
+.menu, .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+        }
+    .menu {
+        height: 58px;
+    }
+    .menu li {
+        background: -moz-linear-gradient(#292929, #252525);
+        background: -ms-linear-gradient(#292929, #252525);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #252525));
+        background: -webkit-linear-gradient(#292929, #252525);
+        background: -o-linear-gradient(#292929, #252525);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#252525');
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#252525')";
+        background: linear-gradient(#292929, #252525);
+        border-bottom: 2px solid #181818;
+        border-top: 2px solid #303030;
+        min-width: 700px;
+    }
+    .menu > li {
+        display: block;
+        float: left;
+        position: relative;
+    }
+    .menu > li:first-child {
+        border-radius: 5px 0 0;
+    }
+    .menu a {
+        border-left: 3px solid rgba(0, 0, 0, 0);
+        color: #808080;
+        display: block;
+        font-family: 'Lucida Console';
+        font-size: 18px;
+        line-height: 54px;
+        padding: 0 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .menu li:hover {
+        background-color: #1c1c1c;
+        background: -moz-linear-gradient(#1c1c1c, #1b1b1b);
+        background: -ms-linear-gradient(#1c1c1c, #1b1b1b);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1c1c1c), color-stop(100%, #1b1b1b));
+        background: -webkit-linear-gradient(#1c1c1c, #1b1b1b);
+        background: -o-linear-gradient(#1c1c1c, #1b1b1b);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b');
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b')";
+        background: linear-gradient(#1c1c1c, #1b1b1b);
+        border-bottom: 2px solid #222222;
+        border-top: 2px solid #1B1B1B;
+    }
+    .menu li:hover > a {
+        border-radius: 5px 0 0 0;
+        border-left: 3px solid #C4302B;
+        color: #C4302B;
+    }
+    .submenu {
+        left: 0;
+        max-height: 0;
+        position: absolute;
+        top: 100%;
+        z-index: 0;
+        -webkit-perspective: 400px;
+        -moz-perspective: 400px;
+        -ms-perspective: 400px;
+        -o-perspective: 400px;
+        perspective: 400px;
+    }
+    .submenu li {
+        opacity: 0;
+        -webkit-transform: rotateY(90deg);
+        -moz-transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg);
+        -o-transform: rotateY(90deg);
+        transform: rotateY(90deg);
+        -webkit-transition: opacity .4s, -webkit-transform .5s;
+        -moz-transition: opacity .4s, -moz-transform .5s;
+        -ms-transition: opacity .4s, -ms-transform .5s;
+        -o-transition: opacity .4s, -o-transform .5s;
+        transition: opacity .4s, transform .5s;
+    }
+    .menu .submenu li:hover a {
+        border-left: 3px solid #454545;
+        border-radius: 0;
+        color: #ffffff;
+    }
+    .menu > li:hover .submenu, .menu > li:focus .submenu {
+        max-height: 200px;
+        z-index: 10;
+    }
+    .menu > li:hover .submenu li, .menu > li:focus .submenu li {
+        opacity: 1;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+    .menu li:hover .submenu li:nth-child(1) {
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    .menu li:hover .submenu li:nth-child(2) {
+        -webkit-transition-delay: 50ms;
+        -moz-transition-delay: 50ms;
+        -ms-transition-delay: 50ms;
+        -o-transition-delay: 50ms;
+        transition-delay: 50ms;
+    }
+    .menu li:hover .submenu li:nth-child(3) {
+        -webkit-transition-delay: 100ms;
+        -moz-transition-delay: 100ms;
+        -ms-transition-delay: 100ms;
+        -o-transition-delay: 100ms;
+        transition-delay: 100ms;
+    }
+    .menu li:hover .submenu li:nth-child(4) {
+        -webkit-transition-delay: 150ms;
+        -moz-transition-delay: 150ms;
+        -ms-transition-delay: 150ms;
+        -o-transition-delay: 150ms;
+        transition-delay: 150ms;
+    }
+    .menu li:hover .submenu li:nth-child(5) {
+        -webkit-transition-delay: 200ms;
+        -moz-transition-delay: 200ms;
+        -ms-transition-delay: 200ms;
+        -o-transition-delay: 200ms;
+        transition-delay: 200ms;
+    }
+    .menu li:hover .submenu li:nth-child(6) {
+        -webkit-transition-delay: 250ms;
+        -moz-transition-delay: 250ms;
+        -ms-transition-delay: 250ms;
+        -o-transition-delay: 250ms;
+        transition-delay: 250ms;
+    }
+    .menu li:hover .submenu li:nth-child(7) {
+        -webkit-transition-delay: 300ms;
+        -moz-transition-delay: 300ms;
+        -ms-transition-delay: 300ms;
+        -o-transition-delay: 300ms;
+        transition-delay: 300ms;
+    }
+    .menu li:hover .submenu li:nth-child(8) {
+        -webkit-transition-delay: 350ms;
+        -moz-transition-delay: 350ms;
+        -ms-transition-delay: 350ms;
+        -o-transition-delay: 350ms;
+        transition-delay: 350ms;
+    }
+    .submenu li:nth-child(1) {
+        -webkit-transition-delay: 350ms;
+        -moz-transition-delay: 350ms;
+        -ms-transition-delay: 350ms;
+        -o-transition-delay: 350ms;
+        transition-delay: 350ms;
+    }
+    .submenu li:nth-child(2) {
+        -webkit-transition-delay: 300ms;
+        -moz-transition-delay: 300ms;
+        -ms-transition-delay: 300ms;
+        -o-transition-delay: 300ms;
+        transition-delay: 300ms;
+    }
+    .submenu li:nth-child(3) {
+        -webkit-transition-delay: 250ms;
+        -moz-transition-delay: 250ms;
+        -ms-transition-delay: 250ms;
+        -o-transition-delay: 250ms;
+        transition-delay: 250ms;
+    }
+    .submenu li:nth-child(4) {
+        -webkit-transition-delay: 200ms;
+        -moz-transition-delay: 200ms;
+        -ms-transition-delay: 200ms;
+        -o-transition-delay: 200ms;
+        transition-delay: 200ms;
+    }
+    .submenu li:nth-child(5) {
+        -webkit-transition-delay: 150ms;
+        -moz-transition-delay: 150ms;
+        -ms-transition-delay: 150ms;
+        -o-transition-delay: 150ms;
+        transition-delay: 150ms;
+    }
+    .submenu li:nth-child(6) {
+        -webkit-transition-delay: 100ms;
+        -moz-transition-delay: 100ms;
+        -ms-transition-delay: 100ms;
+        -o-transition-delay: 100ms;
+        transition-delay: 100ms;
+    }
+    .submenu li:nth-child(7) {
+        -webkit-transition-delay: 50ms;
+        -moz-transition-delay: 50ms;
+        -ms-transition-delay: 50ms;
+        -o-transition-delay: 50ms;
+        transition-delay: 50ms;
+    }
+
+    .submenu li:nth-child(8) {
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+     .button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {
+    background-color: #008CBA;
+}
+.button3 {
+    background-color: #f44336;
+} 
+</style>
+</head>  
+<body style="background: #8A2BE2;" > 
+    <ul>
+  <li><a class="active" ><i class="fa-solid fa-house"></i></a></li>
+  <li><div class="dropdown">
+    <button class="dropbtn">Schemes
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://pmkisan.gov.in/registrationformnew.aspx">PM-Kisan Scheme</a>
+            <a href="https://www.jansamarth.in/kisan-credit-card-scheme">(KCC)Scheme</a>
+            <a href="https://www.pmfby.gov.in/">(PMFBY) Scheme</a>
+            <a href="https://enam.gov.in/NAMV2/home/other_register.html">(e-NAM) Scheme</a>
+     <a href="https://indiaplus.co.in/paramparagat-krishi-vikas-yojana-online-registration/">PKVY Scheme</a>
+     <a href="https://soilhealth.dac.gov.in/home">Soil Health Card Scheme</a>
+     <a href="https://agricoop.gov.in/en/RashtriyaDiv">(rkvy) Scheme</a>
+     <a href="https://nmsa.dac.gov.in/">(NMSA) Scheme</a>
+     <a href="https://www.india.gov.in/spotlight/pradhan-mantri-annadata-aay-sanrakshan-abhiyan-pm-aasha">PM-AASHA Scheme</a>
+</div></li>
+  <li><div class="dropdown">
+    <button class="dropbtn">States
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://rajkisan.rajasthan.gov.in/">Rajasthan</a>
+            <a href="http://mpkrishi.mp.gov.in/">Madhya Pradesh</a>
+            <a href="http://krishi.maharashtra.gov.in/">Maharashtra</a>
+            <a href="http://upagripardarshi.gov.in/StaticPages/UttarPradesh4.aspx">Uttar Pradesh</a>
+            <a href="https://agri.gujarat.gov.in/">Gujarat</a>
+            <a href="http://raitamitra.kar.nic.in/KAN/index.asp">Karnataka</a>
+            <a href="http://www.apagrisnet.gov.in/">Andhra Pradesh</a>
+            <a href="http://agriodisha.nic.in/">Odisha</a>
+            <a href="http://agridept.cg.gov.in/">Chhattisgarh</a>
+            <a href="http://www.tn.gov.in/department/2">Tamil Nadu</a>
+            <a href="http://agri.telangana.gov.in/">Telangana</a>
+            <a href="http://krishi.bih.nic.in/">Bihar</a>
+            <a href="https://wb.gov.in/portal/web/guest/agriculture">West Bengal</a>
+            <a href="http://arunachalpradesh.nic.in/">Arunachal Pradesh</a>
+            <a href="http://www.jharkhand.gov.in/agri">Jharkhand</a>
+            <a href="https://agri-horti.assam.gov.in/">Assam</a>
+            <a href="https://ladakh.nic.in/agriculture/">Ladakh</a>
+            <a href="http://www.hpagriculture.com/">Himachal Pradesh</a>
+            <a href="http://agriculture.uk.gov.in/">Uttarakhand</a>
+            <a href="http://agripb.gov.in/">Punjab</a>
+            <a href="http://agriharyana.gov.in/">Haryana</a>
+            <a href="http://www.jkapd.nic.in/">Jammu and Kashmir</a>
+            <a href="http://www.keralaagriculture.gov.in/">Kerala</a>
+            <a href="http://www.megagriculture.gov.in/">Meghalaya</a>
+            <a href="http://agrimanipur.gov.in/">Manipur</a>
+            <a href="http://agriculturemizoram.nic.in/">Mizoram</a>
+            <a href="http://agringl.nic.in/">Nagaland</a>
+            <a href="http://agri.tripura.gov.in/">Tripura</a>
+            <a href="http://agri.and.nic.in/">Andaman and Nicobar Islands</a>
+            <a href="http://www.sikkimagrisnet.org/">Sikkim</a>
+            <a href="http://agri.goa.gov.in/">Goa</a>
+            <a href="http://agricoop.nic.in/">Delhi</a>
+            <a href="http://www.daman.nic.in/websites/zonal_agriculture_daman/index.asp">Dadra and Nagar Haveli and Daman and Diu</a>
+            <a href="http://agri.puducherry.gov.in/">Puducherry</a>
+            <a href="http://agripb.gov.in/">Chandigarh</a>
+            <a href="http://lakagri.nic.in/">Lakshadweep</a>
+</div></li>
+  <li class="abc"><a href="file:///C:/Users/MARIA%20MEHREEN/Documents/csp/index2.html">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+</ul></br>
+    <div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="C:\Users\MARIA MEHREEN\Downloads\climate picture.jpg" style="width:100%" onClick="openLink('https://www.ventusky.com/13.080;80.282')">
+  <div class="text"><b style="color: black;">Live Climate</b></div>
+</div>
+<div class="mySlides fade">
+  <img src="C:\Users\MARIA MEHREEN\Downloads\water management.jpeg" style="width:100%" onClick="openLink('http://www.iiwm.res.in/awmp/index.php?option=technology')">
+  <div class="text"><b style="color: black;">Water Management</b></div>
+</div>
+<div class="mySlides fade">
+  <img src="C:\Users\MARIA MEHREEN\Downloads\Crop Insurance.jpg" style="width:100%" onClick="openLink('https://www.pmfby.gov.in/'')">
+  <div class="text"><b style="color: black;">Crop Insurance</b></div>
+</div>
+<div class="mySlides fade">
+  <img src="C:\Users\MARIA MEHREEN\Downloads\agriculture equipements.jpeg" style="width:100%" onClick="openLink('https://khetigaadi.com/new-tractor-brand/eicher-tractors/en')">
+  <div class="text"><b style="color: black;">Equipment Needs</b></div>
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div></div></div>
+<center>&nbsp;<a href="https://www.oneindia.com/beans-price-in-india.html"><img src="C:\Users\MARIA MEHREEN\Downloads\vegatables.jpeg" style="width:70%"><br>&nbsp;</br><button class="button">Live Rate Of Vegetables</button></br></a></br>
+&nbsp;<a href="https://tradingeconomics.com/commodity/wheat#:~:text=Wheat%20is%20expected%20to%20trade,552.75%20in%2012%20months%20time"><img src="C:\Users\MARIA MEHREEN\Downloads\grains1.jpeg" style="width:70%"><br>&nbsp;</br><button class="button button2">Live Rate Of grains</button></br></a></br>
+&nbsp;<a href="https://www.oneindia.com/fruits-price.html"><img src="C:\Users\MARIA MEHREEN\Downloads\fruits.jpeg" style="width:70%"><br>&nbsp;</br><button class="button button3">Live Rate Of Fruits</button></br></a></center>
+<center><video width="190" height="150" controls autoplay muted>
+  <source src="C:\Users\MARIA MEHREEN\Downloads\Best 10 Agriculture Schemes for Farmers in India _ Farmer Schemes _ Kisan Schemes _ किसान योजनाएं.mp4" type="video/mp4">
+</video>&nbsp;
+<video width="190" height="150" controls autoplay muted>
+  <source src="C:\Users\MARIA MEHREEN\Downloads\How Safe Are Pesticides, Really_.mp4" type="video/mp4">
+</video>&nbsp;&nbsp;
+<video width="190" height="150" controls autoplay muted>
+  <source src="C:\Users\MARIA MEHREEN\Downloads\How to Apply for Agriculture Insurance Company of India Limited Maneger Trainee Post.mp4" type="video/mp4">
+</video>&nbsp;
+<video width="190" height="150" controls autoplay muted>
+  <source src="C:\Users\MARIA MEHREEN\Downloads\How to apply for Agri Infrastructure Fund Scheme _ Agriculture Infrastructure Fund Online Apply.mp4" type="video/mp4">
+</video>&nbsp;
+<video width="190" height="150" controls autoplay muted>
+  <source src="C:\Users\MARIA MEHREEN\Downloads\Artificial Intelligence (AI) in Agriculture _ The Future of Modern Smart Farming with IoT.mp4" type="video/mp4">
+</video>&nbsp;
+<video width="190" height="150" controls autoplay muted>
+  <source src="C:\Users\MARIA MEHREEN\Downloads\Agricultural Water Management 101.mp4" type="video/mp4">
+</video>&nbsp;
+<video width="190" height="150" controls autoplay muted>
+  <source src="C:\Users\MARIA MEHREEN\Downloads\video.mp4" type="video/mp4">
+</video>&nbsp;
+<video width="190" height="150" controls autoplay muted>
+  <source src="C:\Users\MARIA MEHREEN\Downloads\How to make WEED  KILLER _ HERBICIDE at home _ How to Kill weeds Naturally _ Organic Herbicide.mp4" type="video/mp4">
+</video></center>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<script>
+  function openLink(url) {
+            if(url)
+                window.location.href = url;
+        }
+</script>
+    </body>
+</html>
